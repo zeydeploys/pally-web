@@ -1,26 +1,43 @@
-@import "tailwindcss";
-
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --sage: #3D7A4A;
+  --sage-light: #E8F2E8;
+  --bg: #F4F7F4;
+  --card: #ffffff;
+  --text: #1A2E1A;
+  --muted: #5a6b5a;
+  --border: #C8D8C8;
 }
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
 }
+a { color: var(--sage); }
+.container { max-width: 720px; margin: 0 auto; padding: 48px 20px 80px; }
+.brand {
+  font-size: 22px; font-weight: 700; color: var(--sage);
+  text-decoration: none; display: inline-block; margin-bottom: 32px;
+}
+.prose h1 { font-size: 28px; margin: 0 0 8px; }
+.prose h2 { font-size: 20px; margin: 32px 0 8px; }
+.prose h3 { font-size: 17px; margin: 24px 0 6px; }
+.prose p, .prose li { font-size: 15px; }
+.prose ul, .prose ol { padding-left: 22px; }
+.prose hr { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
+.muted { color: var(--muted); font-size: 14px; }
+.welcome { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px; }
+.welcome-card {
+  background: var(--card); border: 1px solid var(--border); border-radius: 20px;
+  padding: 40px 32px; max-width: 420px; text-align: center;
+}
+.welcome-check {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: var(--sage-light); color: var(--sage);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 20px; font-size: 28px;
+}
+.welcome-card h1 { font-size: 22px; margin: 0 0 10px; }
+.welcome-card p { color: var(--muted); margin: 0; font-size: 15px; }
