@@ -39,7 +39,9 @@ export default function WaitlistForm() {
     }
 
     setStatus("success");
-    setMessage("Listedesin! Lansmanda ilk sen haber alacaksın. 🌿");
+    setMessage(
+      "Listedesin! 🌿 Sana ayrıca bir mail göndermiyoruz — Pally yayına çıktığı an bu listedeki herkese haber vereceğiz. Yapman gereken bir şey yok.",
+    );
     setEmail("");
   }
 
