@@ -272,3 +272,73 @@ a {
     width: 100%;
   }
 }
+
+/* Hukuki belge başlığı: marka + dil bağlantısı */
+.doc-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.doc-top .brand {
+  margin-bottom: 0;
+}
+.doc-lang {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--sage);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.doc-lang:hover {
+  text-decoration: underline;
+}
+
+/* Davet sayfası (/join/[code]) */
+.join-card .brand {
+  margin-bottom: 24px;
+}
+.join-label {
+  margin: 0 0 6px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.join-code {
+  margin: 0 0 24px;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: 6px;
+  color: var(--text);
+  /* Beklenmeyen uzunlukta kod gelirse kart taşmasın */
+  overflow-wrap: anywhere;
+  line-height: 1.2;
+}
+.join-cta {
+  display: block;
+  padding: 14px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  background: var(--sage);
+  border-radius: 12px;
+  text-decoration: none;
+}
+.join-hint {
+  margin: 20px 0 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.join-hint--en {
+  margin-top: 8px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 380px) {
+  .join-code {
+    font-size: 28px;
+    letter-spacing: 4px;
+  }
+}
