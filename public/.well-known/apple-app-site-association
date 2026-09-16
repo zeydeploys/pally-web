@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["3A4PYZ877J.app.getpally.ios"],
+        "components": [
+          { "/": "/join/*", "comment": "Group invite links open in the app" }
+        ]
+      }
+    ]
+  }
+}
